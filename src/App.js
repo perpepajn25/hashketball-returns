@@ -8,27 +8,27 @@ import 'semantic-ui-css/semantic.min.css';
 
 
 class App extends Component {
-  state = {
-    teams: gamesData.teams,
-    selectedPlayer: null
-  }
-
-  handleSelectPlayer = (player) => {
-    this.setState({
-      selectedPlayer: player
-    })
-  }
+  // state = {
+  //   selectedPlayer: null
+  // }
+  //
+  // handleSelectPlayer = (player) => {
+  //   this.setState({
+  //     selectedPlayer: player
+  //   })
+  // }
 
   render() {
     return (
       <div className="App">
         <NavHeader />
-        <TeamList teams={this.state.teams} selectPlayer={this.handleSelectPlayer}/>
-        {!this.state.selectedPlayer ? <div> Click Player for Details </div> :
-          <PlayerDetails selectedPlayer={this.state.selectedPlayer}/>}
+        <TeamList />
+        <PlayerDetails />
       </div>
     );
   }
 }
 
 export default App;
+
+// <PlayerDetails />}
